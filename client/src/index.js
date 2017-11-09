@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+import Styles from './styles'
 
 class HomePage extends React.Component {
   state = {
@@ -36,40 +40,81 @@ class HomePage extends React.Component {
 
   render() {
     return(
-      <div>
+      <div style={Styles.bgColor}>
         <form onSubmit={e => this.signup(e)}>
-          <h3>Register</h3>
-          <input
-            placeholder="username"
-            name="username"
-            onChange={e => this.setValue(e)}
-          />
-          <input
-            placeholder="password"
-            name="password"
-            onChange={e => this.setValue(e)}
-          />
-          <input
-            placeholder="confirm password"
-            name="confirmPassword"
-            onChange={e => this.setValue(e)}
-          />
-          <button type='submit'>Submit</button>
+          <Container>
+            <Row>
+              <Col style={Styles.arial}>
+                <h3 style={Styles.red}>Register</h3>
+              </Col>
+            </Row>
+            <Row>
+              <Col style={Styles.arial}>
+                <input
+                  placeholder="username"
+                  name="username"
+                  onChange={e => this.setValue(e)}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col style={Styles.arial}>
+                <input
+                  placeholder="password"
+                  name="password"
+                  onChange={e => this.setValue(e)}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col style={Styles.arial}>
+                <input
+                  placeholder="confirm password"
+                  name="confirmPassword"
+                  onChange={e => this.setValue(e)}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col style={Styles.arial}>
+                <Button color="info" type='submit'>Submit</Button>
+              </Col>
+            </Row>
+
+          </Container>
         </form>
 
         <form onSubmit={e => this.login(e)}>
-          <h3>Login</h3>
-          <input
-            placeholder="username"
-            name="username"
-            onChange={e => this.setValue(e)}
-          />
-          <input
-            placeholder="password"
-            name="password"
-            onChange={e => this.setValue(e)}
-          />
-          <button type='submit'>Submit</button>
+          <Container>
+            <Row>
+              <Col style={Styles.arial}>
+                <h3 style={Styles.red} >Login</h3>
+              </Col>
+            </Row>
+            <Row>
+              <Col style={Styles.arial}>
+                <input
+                  placeholder="username"
+                  name="username"
+                  onChange={e => this.setValue(e)}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col style={Styles.arial}>
+                <input
+                  placeholder="password"
+                  name="password"
+                  onChange={e => this.setValue(e)}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col style={Styles.arial}>
+                <Button color="info" type='submit'>Submit</Button>
+              </Col>
+            </Row>
+          </Container>
         </form>
       </div>
     )
