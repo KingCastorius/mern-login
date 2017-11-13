@@ -3,7 +3,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
-import Styles from '../styles'
+import Styles from '../styles'  
 
 class HomePage extends React.Component{
   render() {
